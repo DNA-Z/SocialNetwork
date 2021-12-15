@@ -3,9 +3,54 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.Application", "SocialNetwork.Application", "{5607A1EE-5F8C-456B-82D2-3778314E85D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.Infrastructure.Data", "SocialNetwork.Infrastructure.Data", "{49CBCE52-5F2F-4D48-9457-DCBB89424A4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.Infrastructure.IoC", "SocialNetwork.Infrastructure.IoC", "{5888D15E-322B-42AB-938A-D77FE59EEA25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.Domain", "SocialNetwork.Domain", "{D13AB439-8C0E-4281-978A-AEC050AA5DDD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.UI.ASPNET", "SocialNetwork.UI.ASPNET", "{6329C44C-5CA8-4731-8E4E-129607838D8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.Domain.Entities", "SocialNetwork.Domain.Entities", "{A03A0571-A040-4A06-AC85-EA5FF26E157A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.Core.Chatbot", "SocialNetwork.Core.Chatbot", "{44E63EA1-1DCA-4350-A462-131A1434B1BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.Domain.Core.Chatbot", "SocialNetwork.Domain\SocialNetwork.Core.Chatbot\SocialNetwork.Domain.Core.Chatbot\SocialNetwork.Domain.Core.Chatbot.csproj", "{7D633FD5-F225-44DC-AB28-E016E73C6CB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.Domain.Entities", "SocialNetwork.Domain\SocialNetwork.Domain.Entities\SocialNetwork.Domain.Entities\SocialNetwork.Domain.Entities.csproj", "{4D3BC404-499F-4F38-92DD-F7C55BAE3AC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.Application", "SocialNetwork.Application\SocialNetwork.Application\SocialNetwork.Application.csproj", "{31FD6136-ED5C-4A97-9F60-2EB16BA9BE0D}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D633FD5-F225-44DC-AB28-E016E73C6CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D633FD5-F225-44DC-AB28-E016E73C6CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D633FD5-F225-44DC-AB28-E016E73C6CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D633FD5-F225-44DC-AB28-E016E73C6CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D3BC404-499F-4F38-92DD-F7C55BAE3AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D3BC404-499F-4F38-92DD-F7C55BAE3AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D3BC404-499F-4F38-92DD-F7C55BAE3AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D3BC404-499F-4F38-92DD-F7C55BAE3AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31FD6136-ED5C-4A97-9F60-2EB16BA9BE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FD6136-ED5C-4A97-9F60-2EB16BA9BE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FD6136-ED5C-4A97-9F60-2EB16BA9BE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FD6136-ED5C-4A97-9F60-2EB16BA9BE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A03A0571-A040-4A06-AC85-EA5FF26E157A} = {D13AB439-8C0E-4281-978A-AEC050AA5DDD}
+		{44E63EA1-1DCA-4350-A462-131A1434B1BB} = {D13AB439-8C0E-4281-978A-AEC050AA5DDD}
+		{7D633FD5-F225-44DC-AB28-E016E73C6CB3} = {44E63EA1-1DCA-4350-A462-131A1434B1BB}
+		{4D3BC404-499F-4F38-92DD-F7C55BAE3AC6} = {A03A0571-A040-4A06-AC85-EA5FF26E157A}
+		{31FD6136-ED5C-4A97-9F60-2EB16BA9BE0D} = {5607A1EE-5F8C-456B-82D2-3778314E85D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5FFCB63-C8C6-49EC-9E96-486D4EAFDE9E}
