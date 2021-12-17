@@ -25,6 +25,7 @@ namespace ApplicationLogic.Commands
             }
         }
 
+
         public record Response(int Id, string FirstName, string LastName, string NickName, DateTime DateOfBirth, string EMailAdress, string Password, bool Completed);
     }
 }

@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Context\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\SocialNetwork.Domain\SocialNetwork.Domain.Entities\SocialNetwork.Domain.Entities\SocialNetwork.Domain.Entities.csproj" />
   </ItemGroup>
 
