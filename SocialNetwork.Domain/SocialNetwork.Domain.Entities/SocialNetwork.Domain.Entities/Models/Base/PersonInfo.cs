@@ -11,6 +11,7 @@ namespace SocialNetwork.Domain.Entities.Models.Base
         public string EMailAdress { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        public bool Completed { get; set; } = false;
 
 
         public PersonInfo(int Id, string FirstName, string LastName, string NickName, DateTime DateOfBirth, string EMailAdress, string Password)
