@@ -3,7 +3,7 @@ namespace SocialNetwork.Domain.Entities.Models.Base
 {
     public class PersonInfo
     {
-        public int Id { get; init; }
+        public Guid Id { get; init; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string NickName { get; set; }
@@ -14,7 +14,7 @@ namespace SocialNetwork.Domain.Entities.Models.Base
         public bool Completed { get; set; } = false;
 
 
-        public PersonInfo(int Id, string FirstName, string LastName, string NickName, DateTime DateOfBirth, string EMailAdress, string Password)
+        public PersonInfo(Guid Id, string FirstName, string LastName, string NickName, DateTime DateOfBirth, string EMailAdress, string Password)
         {
             this.Id = Id;
             this.FirstName = FirstName;
