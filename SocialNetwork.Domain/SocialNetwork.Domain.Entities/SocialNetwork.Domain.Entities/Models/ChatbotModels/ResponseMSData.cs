@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SocialNetwork.Domain.Entities.Models.ChatbotModels
 {
-    public class ResponseData
+    public class ResponseMSData
     {
         public string Response { get; set; }
         public int ResponseCategory { get; set; }

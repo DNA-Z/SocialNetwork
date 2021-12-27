@@ -13,6 +13,9 @@ namespace SocialNetwork.Domain.Entities.Models.Base
         public string Password { get; set; }
         public bool Completed { get; set; } = false;
 
+        public ChatRoom Room;
+
+        private List<string> chatLog = new List<string>();
 
         public PersonInfo(Guid Id, string FirstName, string LastName, string NickName, DateTime DateOfBirth, string EMailAdress, string Password)
         {
@@ -25,5 +28,16 @@ namespace SocialNetwork.Domain.Entities.Models.Base
             Login = EMailAdress;
             this.Password = Password;
         }
+
+        public void Receive(string sender, string message)
+        {
+            string s = $"{sender}: {message}";
+            chatLog.Add(s);
+        }
+
+        public void Say(string message)
+            => Room.Broadcast(NickName, message);
+
+
     }
 }

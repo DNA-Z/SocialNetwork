@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SocialNetwork.Infrastructure.Data.ModelConfigurations
+namespace SocialNetwork.Domain.Entities.Models
 {
-    public class ResponseDataConfiguration
+    public class ChatRoom
     {
-
     }
 }
