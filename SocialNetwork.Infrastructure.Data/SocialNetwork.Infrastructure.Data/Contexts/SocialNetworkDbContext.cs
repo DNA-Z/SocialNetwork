@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
-namespace SocialNetwork.Infrastructure.Data.Context
+namespace SocialNetwork.Infrastructure.Data.Contexts
 {
     public class SocialNetworkDbContext : DbContext
     {

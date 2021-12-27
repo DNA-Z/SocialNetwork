@@ -12,10 +12,18 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\SocialNetwork.Domain\SocialNetwork.Domain.Entities\SocialNetwork.Domain.Entities\SocialNetwork.Domain.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ChatbotMLModel\ChatbotMLModel.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

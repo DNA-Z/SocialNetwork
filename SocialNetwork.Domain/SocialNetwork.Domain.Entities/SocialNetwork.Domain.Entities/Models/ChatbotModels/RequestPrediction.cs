@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SocialNetwork.Infrastructure.Data.Context
+namespace SocialNetwork.Domain.Core.Chatbot.DataModels
 {
-    internal class LibraryDbContext
+    internal class RequestPrediction
     {
     }
 }
