@@ -15,11 +15,11 @@ namespace SocialNetwork.Domain.Entities.Models
         /// </summary>
         /// <param name="sourse">Кто послал сообщение</param>
         /// <param name="message">Текст сообщения</param>
-        public void Broadcast(Guid sourse, string message)
+        public void Broadcast(Guid sourse, ChatMessage message)
         {
             foreach(var p in people)
                 if(p.Id == sourse)
-                    p.Receive(sourse, message);
+                    p.Receive(sourse, message.TextMessage);
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace SocialNetwork.Domain.Entities.Models
         {
             string joinMsg = $"{p.FirstName} {p.LastName} добавился(ась) в чат";
 
-            Broadcast(IdChatRoom, joinMsg);
+            Broadcast(IdChatRoom, new ChatMessage(joinMsg));
 
             p.Room = this;
             people.Add(p);

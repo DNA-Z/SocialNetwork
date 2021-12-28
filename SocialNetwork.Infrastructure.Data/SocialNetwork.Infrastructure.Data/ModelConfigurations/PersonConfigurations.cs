@@ -4,7 +4,7 @@ using SocialNetwork.Domain.Entities.Models.Base;
 
 namespace SocialNetwork.Infrastructure.Data.ModelConfigurations
 {
-    internal class PersonInfoConfigurations : IEntityTypeConfiguration<Person>
+    internal class PersonConfigurations : IEntityTypeConfiguration<Person>
     {
         public void Configure(EntityTypeBuilder<Person> builder)
         {

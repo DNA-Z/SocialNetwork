@@ -13,6 +13,8 @@ namespace SocialNetwork.Domain.Entities.Models.Base
         public string Password { get; set; }
         public bool Completed { get; set; } = false;
 
+        public Role Role { get; set; } = Role.User;
+
         public ChatRoom Room;
 
         private List<string> chatLog = new List<string>();
@@ -38,11 +40,9 @@ namespace SocialNetwork.Domain.Entities.Models.Base
         public void Say(string message)
             => Room.Broadcast(Id, message);
 
-        public void PrivateMessage(string who, string message)
+        public void PrivateMessage(Guid who, string message)
         {
-            Room.Message(Id, who, message);
-
-            
+            Room.Message(Id, who, message);            
         }
     }
 }
