@@ -2,7 +2,7 @@
 
 namespace SocialNetwork.Domain.Entities.Models
 {
-    public class AdminInfo : PersonInfo
+    public class AdminInfo : Person
     {
 
     }

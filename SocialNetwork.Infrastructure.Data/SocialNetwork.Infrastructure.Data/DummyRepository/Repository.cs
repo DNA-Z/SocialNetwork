@@ -4,7 +4,7 @@ namespace SocialNetwork.Infrastructure.Data.DummyRepository
 {
     public class Repository
     {
-        public List<PersonInfo> PersonInformations { get; } = new List<PersonInfo>
+        public List<Person> PersonInformations { get; } = new List<Person>
         {
             new PersonInfo ( "Tim", "Skold", "Tim_Skold", new DateTime(1966, 12, 14), "t.skold@gmail.com", "1Dfg153" ),
             new PersonInfo ( "Timothy", "Linton", "Zim_Zam", new DateTime(1969, 06, 25), "zim.zam@gmail.com", "1423jF_153" ),

@@ -4,9 +4,9 @@ using SocialNetwork.Domain.Entities.Models.Base;
 
 namespace SocialNetwork.Infrastructure.Data.ModelConfigurations
 {
-    internal class PersonInfoConfigurations : IEntityTypeConfiguration<PersonInfo>
+    internal class PersonInfoConfigurations : IEntityTypeConfiguration<Person>
     {
-        public void Configure(EntityTypeBuilder<PersonInfo> builder)
+        public void Configure(EntityTypeBuilder<Person> builder)
         {
             builder.ToTable("Person");
             builder.Property(p => p.FirstName).IsRequired();

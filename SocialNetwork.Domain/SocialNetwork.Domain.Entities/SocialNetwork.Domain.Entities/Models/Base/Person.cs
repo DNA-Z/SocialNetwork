@@ -1,7 +1,7 @@
 ﻿
 namespace SocialNetwork.Domain.Entities.Models.Base
 {
-    public class PersonInfo
+    public class Person
     {
         public Guid Id { get; init; }
         public string FirstName { get; set; }
@@ -17,7 +17,7 @@ namespace SocialNetwork.Domain.Entities.Models.Base
 
         private List<string> chatLog = new List<string>();
 
-        public PersonInfo(Guid Id, string FirstName, string LastName, string NickName, DateTime DateOfBirth, string EMailAdress, string Password)
+        public Person(Guid Id, string FirstName, string LastName, string NickName, DateTime DateOfBirth, string EMailAdress, string Password)
         {
             this.Id = Id;
             this.FirstName = FirstName;
@@ -38,6 +38,17 @@ namespace SocialNetwork.Domain.Entities.Models.Base
         public void Say(string message)
             => Room.Broadcast(NickName, message);
 
+        public void PrivateMessage(string who, string message)
+        {
+            int s = 4;
+            Room.Message(Id, who, message);
 
+            switch (s)
+            {
+                case 1: break, 2: , 3:
+
+                        break;
+            }
+        }
     }
 }
