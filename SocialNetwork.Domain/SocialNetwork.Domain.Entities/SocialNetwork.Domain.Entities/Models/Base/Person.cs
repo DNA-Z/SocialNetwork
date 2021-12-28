@@ -29,26 +29,20 @@ namespace SocialNetwork.Domain.Entities.Models.Base
             this.Password = Password;
         }
 
-        public void Receive(string sender, string message)
+        public void Receive(Guid sender, string message)
         {
             string s = $"{sender}: {message}";
             chatLog.Add(s);
         }
 
         public void Say(string message)
-            => Room.Broadcast(NickName, message);
+            => Room.Broadcast(Id, message);
 
         public void PrivateMessage(string who, string message)
         {
-            int s = 4;
             Room.Message(Id, who, message);
 
-            switch (s)
-            {
-                case 1: break, 2: , 3:
-
-                        break;
-            }
+            
         }
     }
 }
