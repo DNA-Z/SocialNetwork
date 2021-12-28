@@ -1,14 +1,14 @@
 ﻿using MediatR;
 using SocialNetwork.Infrastructure.Data.DummyRepository;
 
-namespace ApplicationLogic.Commands
+namespace ApplicationLogic.Queries
 {
     public static class GetTodoById
     {
-        public record Command(int Id) : IRequest<Response>;
+        public record Query(int Id) : IRequest<Response>;
 
 
-        public class Handler : IRequestHandler<Command, Response>
+        public class Handler : IRequestHandler<Query, Response>
         {
             private readonly Repository repository;
 
@@ -17,7 +17,7 @@ namespace ApplicationLogic.Commands
                 this.repository = repository;
             }
 
-            public async Task<Response> Handle(Command request, CancellationToken cancellationToken)
+            public async Task<Response> Handle(Query request, CancellationToken cancellationToken)
             {
                 var todo = repository.PersonInformations.FirstOrDefault(x => x.Id == request.Id);
 

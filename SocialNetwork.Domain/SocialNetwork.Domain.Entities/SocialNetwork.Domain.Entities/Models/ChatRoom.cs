@@ -5,7 +5,7 @@ namespace SocialNetwork.Domain.Entities.Models
     //Класс-посредник, где люди посылают сообщения в общий чат
     public class ChatRoom
     {
-        public Guid IdChatRoom { get; set; }
+        public Guid Id { get; set; }
         public string NameChatRoom { get; set; }
 
         List<Person> people = new List<Person>();
@@ -19,7 +19,7 @@ namespace SocialNetwork.Domain.Entities.Models
         {
             foreach(var p in people)
                 if(p.Id == sourse)
-                    p.Receive(sourse, message.TextMessage);
+                    p.Receive(sourse, message);
         }
 
         /// <summary>
@@ -30,9 +30,9 @@ namespace SocialNetwork.Domain.Entities.Models
         {
             string joinMsg = $"{p.FirstName} {p.LastName} добавился(ась) в чат";
 
-            Broadcast(IdChatRoom, new ChatMessage(joinMsg));
+            Broadcast(Id, new ChatMessage(joinMsg));
 
-            p.Room = this;
+            p.ChatRoom = this;
             people.Add(p);
         }
 
@@ -42,7 +42,7 @@ namespace SocialNetwork.Domain.Entities.Models
         /// <param name="source">Кто посылает сообщение</param>
         /// <param name="destination">Кому посылают сообщение</param>
         /// <param name="message">Текст сообщения</param>
-        public void Message(Guid source, Guid destination, string message)
+        public void Message(Guid source, Guid destination, ChatMessage message)
         {
             people.FirstOrDefault(p => p.Id == destination)
                 ?.Receive(source, message);
