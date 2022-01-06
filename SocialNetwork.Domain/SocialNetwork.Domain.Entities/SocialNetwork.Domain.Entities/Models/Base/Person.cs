@@ -15,7 +15,7 @@ namespace SocialNetwork.Domain.Entities.Models.Base
 
         //public bool Completed { get; set; } = false;
         public Role Role { get; set; } = Role.User;   // ? // Роль в чате
-        public Guid ChatRoomId { get; set; }                // Внешний ключ на таблицу 
+        public Guid? ChatRoomId { get; set; }                // Внешний ключ на таблицу 
         public ChatRoom ChatRoom { get; set; }                  // Навигационное св-во на группу чата
 
         private List<string> chatLog = new List<string>();

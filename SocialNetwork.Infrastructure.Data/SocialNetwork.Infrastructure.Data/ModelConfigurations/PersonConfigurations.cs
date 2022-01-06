@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SocialNetwork.Domain.Entities.Models.Base;
+using SocialNetwork.Domain.Entities.Models;
 
 namespace SocialNetwork.Infrastructure.Data.ModelConfigurations
 {
@@ -11,6 +12,11 @@ namespace SocialNetwork.Infrastructure.Data.ModelConfigurations
             builder.ToTable("Person");
             builder.Property(p => p.FirstName).IsRequired();
             builder.Property(p => p.LastName).IsRequired();
+            builder
+                .HasOne(p => p.ChatRoom)
+                .WithMany(r => r. People)
+                .HasForeignKey(p => p.ChatRoomId)
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }
