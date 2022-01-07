@@ -1,4 +1,4 @@
-
+using SocialNetwork.APIController.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,5 +23,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UreRequestCulture();
 
 app.Run();

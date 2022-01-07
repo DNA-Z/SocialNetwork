@@ -11,8 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.Infrastructur
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.Domain", "SocialNetwork.Domain", "{D13AB439-8C0E-4281-978A-AEC050AA5DDD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.UI.ASPNET", "SocialNetwork.UI.ASPNET", "{6329C44C-5CA8-4731-8E4E-129607838D8A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.Domain.Entities", "SocialNetwork.Domain.Entities", "{A03A0571-A040-4A06-AC85-EA5FF26E157A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNetwork.Domain.Entities", "SocialNetwork.Domain\SocialNetwork.Domain.Entities\SocialNetwork.Domain.Entities\SocialNetwork.Domain.Entities.csproj", "{4D3BC404-499F-4F38-92DD-F7C55BAE3AC6}"
@@ -25,7 +23,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNetwork.APIController
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNetwork.ApplicationUseCases", "SocialNetwork.Application\SocialNetwork.ApplicationUseCases\SocialNetwork.ApplicationUseCases.csproj", "{941A8B28-9094-44C1-957A-B3CE6F0AE4EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.Infrastructure.IoC", "SocialNetwork.Infrastructure.IoC\SocialNetwork.Infrastructure.IoC\SocialNetwork.Infrastructure.IoC.csproj", "{EED1C21F-8DA7-4AE7-97CB-6FEC6A77A028}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialNetwork.Infrastructure.IoC", "SocialNetwork.Infrastructure.IoC\SocialNetwork.Infrastructure.IoC\SocialNetwork.Infrastructure.IoC.csproj", "{EED1C21F-8DA7-4AE7-97CB-6FEC6A77A028}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.UI", "SocialNetwork.UI", "{3EFD80E3-776D-4BE9-AD0C-D024D021C2E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.UI.Svelte", "SocialNetwork.UI.Svelte", "{4F70E140-45A9-480D-BBFD-E4684AC843D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialNetwork.UI.ConsoleTest", "SocialNetwork.UI.ConsoleTest", "{7E472FE2-ED30-4FD0-B2BB-DDCFB01ED458}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.UI.ConsoleTestUI", "SocialNetwork.UI\SocialNetwork.UI.ConsoleTest\SocialNetwork.UI.ConsoleTestUI\SocialNetwork.UI.ConsoleTestUI.csproj", "{E39B5020-AB4E-4080-8FD0-5ED3BFD3CDBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +59,10 @@ Global
 		{EED1C21F-8DA7-4AE7-97CB-6FEC6A77A028}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EED1C21F-8DA7-4AE7-97CB-6FEC6A77A028}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EED1C21F-8DA7-4AE7-97CB-6FEC6A77A028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E39B5020-AB4E-4080-8FD0-5ED3BFD3CDBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E39B5020-AB4E-4080-8FD0-5ED3BFD3CDBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E39B5020-AB4E-4080-8FD0-5ED3BFD3CDBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E39B5020-AB4E-4080-8FD0-5ED3BFD3CDBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +74,9 @@ Global
 		{04B2D875-8482-476C-A222-22407DB934D1} = {6F508999-A9BA-43A5-94DC-5DDA86ADAFE9}
 		{941A8B28-9094-44C1-957A-B3CE6F0AE4EF} = {5607A1EE-5F8C-456B-82D2-3778314E85D9}
 		{EED1C21F-8DA7-4AE7-97CB-6FEC6A77A028} = {5888D15E-322B-42AB-938A-D77FE59EEA25}
+		{4F70E140-45A9-480D-BBFD-E4684AC843D4} = {3EFD80E3-776D-4BE9-AD0C-D024D021C2E8}
+		{7E472FE2-ED30-4FD0-B2BB-DDCFB01ED458} = {3EFD80E3-776D-4BE9-AD0C-D024D021C2E8}
+		{E39B5020-AB4E-4080-8FD0-5ED3BFD3CDBF} = {7E472FE2-ED30-4FD0-B2BB-DDCFB01ED458}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5FFCB63-C8C6-49EC-9E96-486D4EAFDE9E}

@@ -1,7 +1,9 @@
 ﻿
+using Abp.Domain.Entities;
+
 namespace SocialNetwork.Domain.Entities.Models.Base
 {
-    public class Person
+    public class Person : Entity//, IAggregateRoot
     {
         public Guid Id { get; init; }
         public string FirstName { get; set; }
@@ -17,6 +19,10 @@ namespace SocialNetwork.Domain.Entities.Models.Base
         public Role Role { get; set; } = Role.User;   // ? // Роль в чате
         public Guid? ChatRoomId { get; set; }                // Внешний ключ на таблицу 
         public ChatRoom ChatRoom { get; set; }                  // Навигационное св-во на группу чата
+
+        //public ICollection<IEventData> DomainEvents => throw new NotImplementedException();
+
+        //int IEntity<int>.Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         private List<string> chatLog = new List<string>();
 
