@@ -20,7 +20,7 @@ namespace SocialNetwork.Domain.Entities.Models
         /// </summary>
         /// <param name="sourse">Кто послал сообщение</param>
         /// <param name="message">Текст сообщения</param>
-        public void Broadcast(Guid sourse, ChatMessage message)
+        public void Broadcast(Guid sourse, Message message)
         {
             foreach(var p in People)
                 if(p.Id == sourse)
@@ -35,7 +35,7 @@ namespace SocialNetwork.Domain.Entities.Models
         {
             string joinMsg = $"{p.FirstName} {p.LastName} добавился(ась) в чат";
 
-            Broadcast(Id, new ChatMessage(joinMsg));
+            Broadcast(Id, new Message(joinMsg));
 
             p.ChatRoom = this;
             People.Add(p);
@@ -47,7 +47,7 @@ namespace SocialNetwork.Domain.Entities.Models
         /// <param name="source">Кто посылает сообщение</param>
         /// <param name="destination">Кому посылают сообщение</param>
         /// <param name="message">Текст сообщения</param>
-        public void Message(Guid source, Guid destination, ChatMessage message)
+        public void Message(Guid source, Guid destination, Message message)
         {
             People.FirstOrDefault(p => p.Id == destination)
                 ?.Receive(source, message);

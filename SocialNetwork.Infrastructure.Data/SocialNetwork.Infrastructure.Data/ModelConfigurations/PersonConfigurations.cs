@@ -10,13 +10,13 @@ namespace SocialNetwork.Infrastructure.Data.ModelConfigurations
         public void Configure(EntityTypeBuilder<Person> builder)
         {
             builder.ToTable("Person");
-            builder.Property(p => p.FirstName).IsRequired();
+            builder.Property(p => p.FirstName).IsRequired().HasMaxLength(15);
             builder.Property(p => p.LastName).IsRequired();
-            builder
-                .HasOne(p => p.ChatRoom)
-                .WithMany(r => r. People)
-                .HasForeignKey(p => p.ChatRoomId)
-                .OnDelete(DeleteBehavior.SetNull);
+            //builder
+                //.HasOne(p => p.ChatRoom)
+                //.WithMany(r => r. People)
+                //.HasForeignKey(p => p.ChatRoomId)
+                //.OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

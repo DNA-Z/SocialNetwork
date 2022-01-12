@@ -1,7 +1,7 @@
 ﻿
 namespace SocialNetwork.Domain.Entities.Models.Base
 {
-    public class ChatMessage
+    public class Message
     {
         public Guid MessageId { get; set; }
 
@@ -9,7 +9,7 @@ namespace SocialNetwork.Domain.Entities.Models.Base
         public DateTime DateMessageWritten { get; set; }
         public string TextMessage { get; set; }
 
-        public ChatMessage(string textMessage)
+        public Message(string textMessage)
         {
             TextMessage = textMessage;
             DateMessageWritten = DateTime.Now;
