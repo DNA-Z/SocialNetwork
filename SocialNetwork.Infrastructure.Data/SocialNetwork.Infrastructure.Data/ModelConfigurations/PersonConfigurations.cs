@@ -11,12 +11,24 @@ namespace SocialNetwork.Infrastructure.Data.ModelConfigurations
         {
             builder.ToTable("Person");
             builder.Property(p => p.FirstName).IsRequired().HasMaxLength(15);
-            builder.Property(p => p.LastName).IsRequired();
+            builder.Property(p => p.LastName).IsRequired().HasMaxLength(30);
+            builder.Property(p => p.DateOfBirth).IsRequired().HasColumnName("Birth Date").HasColumnType("datetime2");
+            builder
+                .HasMany(p => p.ChatRoom)
+                .WithMany(r => r.People)
+                .UsingEntity(j => j.ToTable("PeopleChatRoom"));
+            //.HasForeignKey(p => p.ChatRoomId)
+            //.OnDelete(DeleteBehavior.SetNull);
             //builder
-                //.HasOne(p => p.ChatRoom)
-                //.WithMany(r => r. People)
-                //.HasForeignKey(p => p.ChatRoomId)
-                //.OnDelete(DeleteBehavior.SetNull);
+            //    .HasOne(p => p.LogIn)
+            //    .WithMany(l => l.People)
+
+
+            Map(e =>
+            {
+                e.Property(at => new { at.Id, at.FirstName, at.LastName });
+                e.ToTable("PersonName");
+            });
         }
     }
 }

@@ -14,5 +14,10 @@ namespace SocialNetwork.Domain.Entities.Models.Base
             TextMessage = textMessage;
             DateMessageWritten = DateTime.Now;
         }
+
+
+        //Связь с Person один ко многим (т.е. один человек может написать много сообщений)
+        public Guid PersonId { get; init; }    // Внешний ключ
+        public Person Person { get; set; }     // Навигационное свойство
     }
 }

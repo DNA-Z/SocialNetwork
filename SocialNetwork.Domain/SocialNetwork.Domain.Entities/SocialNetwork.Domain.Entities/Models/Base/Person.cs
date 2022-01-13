@@ -14,8 +14,7 @@ namespace SocialNetwork.Domain.Entities.Models.Base
         public string EMailAdress { get; set; }
         public string Login { get; set; }
         public LogInData LogIn { get; set; }          // Класс LogInData хранит email и пароль
-
-        //public bool Completed { get; set; } = false;
+        public bool WillAttand { get; set; } = false;
         public Role Role { get; set; } = Role.User;   // ? // Роль в чате
         public Guid? ChatRoomId { get; set; }         // Внешний ключ на таблицу 
         public List<ChatRoom> ChatRoom { get; set; }        // Навигационное св-во на группу чатов
@@ -34,7 +33,6 @@ namespace SocialNetwork.Domain.Entities.Models.Base
             Age = Convert.ToInt32(DateTime.Now.Year) - Convert.ToInt32(DateOfBirth.Year);
             this.EMailAdress = EMailAdress;
             Login = EMailAdress;
-            //this.Password = Password;
         }
 
         public void Receive(Guid sender, Message message)

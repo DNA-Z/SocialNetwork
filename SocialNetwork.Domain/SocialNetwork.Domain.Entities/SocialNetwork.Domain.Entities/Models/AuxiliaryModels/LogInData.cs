@@ -4,5 +4,6 @@
     {
         public string Email { get; init; }
         public HashingPasswords HashingPasswords { get; init; }
+        public Guid PeopleId { get; init; }
     }
 }

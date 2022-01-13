@@ -1,18 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SocialNetwork.Domain.Entities.Models.Base;
+using System.Configuration;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace SocialNetwork.Infrastructure.Data.Contexts
 {
     public class SocialNetworkDbContext : DbContext
     {
-        static SocialNetworkDbContext()
-        {
+        readonly string _socialNetworkConnectString = ConfigurationManager.ConnectionStrings["SocialNetworkConnectionString"].ConnectionString;
 
+        public SocialNetworkDbContext(DbContextOptions<SocialNetworkDbContext> options) : base(options) { }
+
+        public DbSet<Person> Persons { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(_socialNetworkConnectString);
+            }
         }
     }
 }
