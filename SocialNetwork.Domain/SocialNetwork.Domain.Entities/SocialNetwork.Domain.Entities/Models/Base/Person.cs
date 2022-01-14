@@ -16,8 +16,8 @@ namespace SocialNetwork.Domain.Entities.Models.Base
         public LogInData LogIn { get; set; }          // Класс LogInData хранит email и пароль
         public bool WillAttand { get; set; } = false;
         public Role Role { get; set; } = Role.User;   // ? // Роль в чате
-        public Guid? ChatRoomId { get; set; }         // Внешний ключ на таблицу 
-        public List<ChatRoom> ChatRoom { get; set; }        // Навигационное св-во на группу чатов
+        public List<ChatRoom> ChatRoom { get; set; }
+        public List<Message> Message { get; set; }
 
         //public ICollection<IEventData> DomainEvents => throw new NotImplementedException();
 

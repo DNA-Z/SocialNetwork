@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SocialNetwork.Domain.Entities.Models.Base;
+using SocialNetwork.Infrastructure.Data.ModelConfigurations;
 using System.Configuration;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
@@ -19,6 +20,12 @@ namespace SocialNetwork.Infrastructure.Data.Contexts
             {
                 optionsBuilder.UseSqlServer(_socialNetworkConnectString);
             }
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new PersonConfigurations());
+            //modelBuilder.ApplyConfiguration(new BotResponseDataConfiguration());
         }
     }
 }

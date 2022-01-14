@@ -24,11 +24,11 @@ namespace SocialNetwork.Infrastructure.Data.ModelConfigurations
             //    .WithMany(l => l.People)
 
 
-            Map(e =>
-            {
-                e.Property(at => new { at.Id, at.FirstName, at.LastName });
-                e.ToTable("PersonName");
-            });
+            //Map(e =>
+            //{
+            //    e.Property(at => new { at.Id, at.FirstName, at.LastName });
+            //    e.ToTable("PersonName");
+            //});
         }
     }
 }

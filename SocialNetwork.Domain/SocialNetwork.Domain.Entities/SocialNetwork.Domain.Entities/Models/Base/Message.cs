@@ -16,7 +16,8 @@ namespace SocialNetwork.Domain.Entities.Models.Base
         }
 
 
-        //Связь с Person один ко многим (т.е. один человек может написать много сообщений)
+        //Связь с Person один ко многим (т.е. один человек может написать много сообщений,
+        //                                но одно и тоже сообщение может написать одни человек)
         public Guid PersonId { get; init; }    // Внешний ключ
         public Person Person { get; set; }     // Навигационное свойство
     }

@@ -9,7 +9,7 @@ namespace SocialNetwork.Infrastructure.Data.Contexts
     public class ChatbotDbContext : DbContext
     {
         readonly string chatbotConnectString = ConfigurationManager.ConnectionStrings["ChatbotConnectionString"].ConnectionString;
-        public virtual DbSet<ResponseMSData> ChatbotResponses { get; init; }
+        public virtual DbSet<BotResponseData> ChatbotResponses { get; init; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

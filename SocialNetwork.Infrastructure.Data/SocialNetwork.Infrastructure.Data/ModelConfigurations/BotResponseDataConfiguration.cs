@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace SocialNetwork.Infrastructure.Data.ModelConfigurations
 {
-    public class ResponseMSDataConfiguration : IEntityTypeConfiguration<ResponseMSData>
+    public class BotResponseDataConfiguration : IEntityTypeConfiguration<BotResponseData>
     {
-        public void Configure(EntityTypeBuilder<ResponseMSData> builder)
+        public void Configure(EntityTypeBuilder<BotResponseData> builder)
         {
             builder.ToTable("ResponseData");
         }
